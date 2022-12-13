@@ -62,7 +62,7 @@ CREATE TABLE `IoT_Raw` (
 WATERMARK FOR `eventTimestamp` AS `eventTimestamp` - INTERVAL '3' SECOND
 ) COMMENT 'IoT_Raw'
 WITH (
-'properties.bootstrap.servers' = 'localhost:9092',
+'properties.bootstrap.servers' = 'kafka:9092',
 'properties.auto.offset.reset' = 'earliest',
 'connector' = 'kafka',
 'format' = 'json',
